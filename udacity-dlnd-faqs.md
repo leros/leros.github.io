@@ -11,6 +11,6 @@ permalink: /udacity-dlnd-faqs/
 -   [DLND项目三：利用RNN模型生成电视剧本](_posts/2017-10-25-udacity-dlnd-p3-rnn.md)
 -   [DLND项目四：基于RNN模型的机器翻译](_posts/2017-10-29-udacity-dlnd-p4-rnn-mt.md)
 -   [DLND项目五：构建GAN模型生成人像](_posts/2017-10-30-udacity-dlnd-p5-gan.md)
--   [利用Conda配置DLND课程项目运行环境](https://leolei.com/2017/11/22/dlnd-environment/)
+-   [利用Conda配置DLND课程项目运行环境](_posts/2017-11-22-dlnd-environment.md)
 
 虽然是最早完成这个项目(英文版)的学员之一，但我接触深度学习的时间还比较短，很多理解难免存在偏差，如果您在阅读的过程中发现不当之处，恳请留言。如果有希望进一步讲解的问题，也可以在相关的文章留言，我会尽量答复，并对文章做相应更新。
