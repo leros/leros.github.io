@@ -7,9 +7,22 @@ _A project report I finished in late 2015 for **Tufts COMP112 Networks & Protoco
 
 _Posted with minor changes in wording._
 
-_ _ _
+---
+- [Introduction](#introduction)
+- [Brief Introduction to Wi-Fi and LTE](#brief-introduction-to-wi-fi-and-lte)
+	- [Wi-Fi](#wi-fi)
+	- [LTE](#lte)
+- [Settings of Measurement](#settings-of-measurement)
+	- [Device](#device)
+	- [Network Environments](#network-environments)
+- [Data and Analysis](#data-and-analysis)
+	- [Part I: Round-trip Time (RTT)](#part-i-round-trip-time-rtt)
+	- [Part II: Routing](#part-ii-routing)
+	- [Part III: Mobility](#part-iii-mobility)
+- [Conclusion](#conclusion)
+- [Notes](#notes)
 
-### Prologue
+### Introduction
 
 Mobile communication is pervasive and now connecting billions of people. Low communication latency is essential to provide a satisfying experience for many services such as chatting, navigating, online gaming, and video streaming. There are various cellular technologies, such as GSM, CDMA, HSPA, and LTE, are deployed all over the world. At home or workplace, Wireless LANs are pervasive. Among these technologies, LTE and IEEE 802.11 wireless LAN (also known as Wi-Fi) get the most attention because they offer high throughput and somehow low latency. Based on data collected from a mobile device, this essay makes a comparative analysis of the latency performance of those two technologies.
 
@@ -125,7 +138,7 @@ One of the limitations of the investigation is that the Quality of service (QoS)
 
 _ _ _
 
-#### Notes
+### Notes
 [^fn1]: Source: [http://www.telekomakademi.com/](http://www.telekomakademi.com/)
 [^fn2]:[Google Project Fi](https://fi.google.com)
 [^fn3]: [Alexa - Top Sites in United States.](http://www.alexa.com/topsites/countries/US)

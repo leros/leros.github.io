@@ -8,9 +8,29 @@ date:   2018-01-28 21:43:55 -0500
 
 *Posted with minor changes in wording and format.*
 
+---
+
+- [Introduction](#introduction)
+- [The Problem](#the-problem)
+	- [What is a character encoding](#what-is-a-character-encoding)
+	- [Why encoding is important for the Web](#why-encoding-is-important-for-the-web)
+	- [Why encoding is difficult for the Web](#why-encoding-is-difficult-for-the-web)
+- [The Evolution](#the-evolution)
+	- [Before the Web was born](#before-the-web-was-born)
+	- [The birth of the Web](#the-birth-of-the-web)
+	- [The booming of the Web and the chaos of encodings](#the-booming-of-the-web-and-the-chaos-of-encodings)
+	- [The rise of the Unicode family: born for the Web](#the-rise-of-the-unicode-family-born-for-the-web)
+- [The Winner](#the-winner)
+	- [Why Unicode](#why-unicode)
+	- [Why UTF-8](#why-utf-8)
+- [One problem](#one-problem)
+- [Summary](#summary)
+- [Further Reading](#further-reading)
+- [Notes](#notes)
 
 ---
-### **Prologue**
+
+### Introduction
 
 UTF-8, a family member of the Unicode Standard, is the dominant character encoding on the Web[^fn1]. According to a survey[^fn2], UTF-8 is used by 86.9% of all the websites as of May 2016[^fn3]. This did not happen overnight. In Jan 2010, only half websites were using UTF-8, and nearly a third were using ISO-8859-1, an encoding system generally intended for Western European languages. If we tracked back further, we would see a totally different landscape of character encoding schemes. In 2001, ASCII was the main encoding of text on the Web (55%+), followed by ISO-8859-1(20%+). UTF-8 did not get any important visibility[^fn4].
 
@@ -26,7 +46,7 @@ Furthermore, in 2013, W3C asked people to
 
 The report focuses on the encoding problem for web content. The encoding for other web components, such as URIs and CSS, is not discussed.
 
-### **The Problem**[^fn7]
+### The Problem[^fn7]
 
 #### What is a character encoding
 
@@ -50,7 +70,7 @@ The difficulties mainly stem from the diversity of languages, particularly the w
 
 17 bits means that the size of codespace is 131,072. However, there are 120,737 code points in UTF-8 Version 8 launched in 2015[^fn12]. 17 bits might not enough. Making people all over the world to accept a uniform encoding is not easy. People living in the U.S. may wonder why would we bother to switch to a new encoding.
 
-### **The Evolution**
+### The Evolution
 
 #### Before the Web was born
 
@@ -86,7 +106,7 @@ In W3C’s 2015 recommendation,
 
 > “The utf-8 encoding is the most appropriate encoding for interchange of Unicode, the universal coded character set. Therefore for new protocols and formats, as well as existing formats deployed in new contexts, this specification requires (and defines) the utf-8 encoding.”
 
-### **The Winner**
+### The Winner
 
 #### Why Unicode
 
@@ -119,22 +139,22 @@ There are several properties make UTF-8 an attractive solution for the encoding 
 -   **Endianess independent** E.g. UTF-16 has two flavors with two different byte orders, so there has to be some way to assist in recognizing the byte order.
 -   **Efficient use of space** For an ASCII character, UTF-8 uses 1 byte, but UTF-16 needs 2 bytes and UTF-32 4 bytes. Even for CJK contents, sometimes UTF-8 could get huge size win over UTF-16 for storing the DOM text due to the fact in DOM file CKJ characters are embedded in tags which use latin characters[^fn29].
 
-### **One problem**
+### One problem
 
 To the end users, there is an illusion that if they use the correct tag in the header, e.g, the web content should be displayed correctly. However, this is not true. The simple reason is that UTF-8(and other Unicode encodings) is the encoding for characters, not for glyphs, for the sake of separation of concern. In other words, getting encoding and decoding correctly done doesn’t mean the users can see the result. In order to show some specific characters, fonts that support such characters must be available from the system. For example, there are 12000+ codepoints in Unicode, but the Arial font only supports 3988 of them. People need to download new fonts to support desired Unicode characters. For example, the Unicode of the rain symbol ![ Unicode of rain symbol](/assets/img/unicode-rain.png) is U+26C6, but people usually only see a blank rectangle ⛆ from the browsers since there is no font for the symbol living in the system.
 
-### **Summary**
+### Summary
 
 The World Wide Web requires a uniform encoding for the contents so that the Web works in all languages, scripts, and cultures. UTF-8 takes the responsibility and is the most frequently used character encoding on the Web. UTF-8 inherits the simplicity, stability, and convertibility from the Unicode Standard. Furthermore, UTF-8 wins the competition to other Unicode encodings for the ability of self-synchronizing, backward compatibility, and space efficiency. However, without appropriate system support(e.g. fonts), the power of the Unicode character encoding could be compromised.
 
-### **Further Reading**
+### Further Reading
 
 -   [UTF-8: Bits, Bytes, and Benefits. ](http://research.swtch.com/utf8)Russ Cox, 2010
 -   [Hello World or Καλημέρα κόσμε or こんにちは 世界 - Bell Labs. ](http://plan9.bell-labs.com/sys/doc/utf.html)Rob Pike and Ken Thompson, 1993
 
 _ _ _
 
-#### Notes
+### Notes
 
 [^fn1]:  If you are curious the characters encoding of a web page, just check the page source. It’s highly possible that you will see something like . 
 [^fn2]:  “Historical yearly trends in the usage of character … - W3Techs.” 2010. May 2, 2016 [http://w3techs.com/technologies/history\_overview/character\_encoding/ms/y](http://w3techs.com/technologies/history_overview/character_encoding/ms/y) 
