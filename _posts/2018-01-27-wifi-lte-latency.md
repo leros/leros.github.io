@@ -27,7 +27,9 @@ LTE is the Long Term Evolution of the Universal Mobile Telecommunications System
 2.  The Evolved UMTS Terrestrial Radio Access Network (E-UTRAN): The E-UTRAN handles the radio communications between the mobile and the evolved packet core(EPC). The evolved base stations are called eNodeB or eNB. Each eNB is a base station that controls the mobiles in one or more cells. The base station that is communicating with a mobile is known as its serving eNB.
 3.  The Evolved Packet Core (EPC): The EPC is a simplified all-IP core network that unifies the separate circuit-switched cellular voice network and the packet-switched cellular data network. And both voice and data will be carried in IP datagrams.
 
-![Components of a LTE network](assets/img/latency_report_LTE_structure.jpg) **Figure 1:** Components of a LTE network [^fn1]
+![Components of a LTE network](/assets/img/latency_report_LTE_structure.jpg)
+
+ **Figure 1:** Components of a LTE network [^fn1]
 
 ### Settings of Measurement
 
@@ -60,11 +62,15 @@ In the experiment, 50 top US websites had been pinged[^fn3] from the device. Pi
 
 There are two dimensions worth of checking: average RTT and covariance of RTT. The former dimension gives us a general idea on the performance, while the later tells us how stable the performance is.
 
-![avarage RTT](/assets/img/latency_report_ave_RTT.png) **Figure 2**: average RTT in four networks
+![avarage RTT](/assets/img/latency_report_ave_RTT.png)
+
+ **Figure 2**: average RTT in four networks
 
 From figure 2, it’s obvious that the latencies of Wi-Fi are much less than the latencies of LTE. For example, 50% of the RTTs in Wi-Fi environment is around 20 ms or less, but in the case of LTE, the threshold is about 120 ms. There is a 100-ms gap.
 
-![cv of RTT](/assets/img/latency_report_cv_RTT.png) **Figure 3**: covariance of RTT in four networks
+![cv of RTT](/assets/img/latency_report_cv_RTT.png)
+
+**Figure 3**: covariance of RTT in four networks
 
 From figure 3, it’s also obvious that Wi-Fi has less relative variability even in static testing. 90% of all coefficient of variation with WiFI are less than 0.2, but only 40% of the coefficient falls in that rage. In general, Wi-Fi is preferred to LTE due to less latency and smaller relative variability. The 100-ms gap of Wi-Fi and LTE reflects the different architecture of these two technologies. Internet routing latency domains Wi-Fi, but there are more latencies involved in the case of LET:
 
@@ -82,16 +88,18 @@ Above analysis gives us a general idea of the performance of those two technique
 -   traceroute-friendly: many hosts block traceroute request, which makes it difficult to get a full path.
 -   Facebook owns network infrastructure while Reddit does not.
 
-##### Facebook
+**Facebook**
 
 ![paths from users to hosts](/assets/img/path_to_facebook.png)
+
 **Figure 4**: The path to Facebook
 
 In general, all paths converge to Facebook's own network “tfbnw”. For tufts-secure, the packets were sent from tufts corporate intranet to `level 3` and then to `tfbnw`. For Comcast, all traffic up to `tfbnw` are actually in the domain of Comcast. For LTE, in the case of t-mobile, it took 48 ms for the packets to get into the internet, and t-mobile then sent packets to another ISP, while sprint core network sent the packets to its own network service.
 
-##### Reddit
+**Reddit**
 
 ![paths from users to hosts](/assets/img/path_to_reddit.png)
+
 **Figure 5**: The path to Reddit
 
 Reddit doesn’t operate network infrastructure, so the packets accessed the server via different paths. Similar to Facebook, there were only few ISPs involved in the routing. For tufts-secure, they were `level 3` and `telia`. For Comcast, they were just Comcast and NTT. And in the t-mobile case, `level 3` and `telia` again. For sprint, packets went through sprint core network and service network and finally gtt. It’s clear that core network latency well explains the difference between Wi-Fi and LTE. If we deduct the core network latency, the gap would be much much narrow.
@@ -100,7 +108,9 @@ Reddit doesn’t operate network infrastructure, so the packets accessed the ser
 
 Another interesting topic is the networking handoff problem. The problem arises when a mobile host moves beyond the range of one base station and into the range of another, it will change its point of attachment into the larger network (i.e., change the base station with which it is associated). Mobility in the same subnet of Wi-Fi network is of less problem. For example, when a mobile device in a building moves from AP1 to AP 2, it would detect a weakening single from AP1 and stars to scan for a stronger signal. The device receives beacon frames from AP2, then it disassociates with AP1 and associates with AP2. Both APs have same SSID, e.g. tufts-secure, so the IP address is same as before and the ongoing TCP sessions could be maintained. The situation will be more complex in the case of LTE. The switching between LTE and Wi-Fi is beyond the scope of the essay. Below is a simple test to show the problem. The test was carried out by simply pinging reddit.com continuously while walking around campus. The network used started with tufts-secure, then t-mobile, then tufts-secure, so on so forth. The worst latencies happened when the network switched in between.
 
-![Volatility of RTT](/assets/img/latency_report_mobility_annotated.png) Figure 6: Volatility of RTT
+![Volatility of RTT](/assets/img/latency_report_mobility_annotated.png)
+
+**Figure 6**: Volatility of RTT
 
 ### Conclusion
 
@@ -115,7 +125,7 @@ One of the limitations of the investigation is that the Quality of service (QoS)
 
 _ _ _
 
-#### References
+#### Notes
 [^fn1]: Source: [http://www.telekomakademi.com/](http://www.telekomakademi.com/)
 [^fn2]:[Google Project Fi](https://fi.google.com)
 [^fn3]: [Alexa - Top Sites in United States.](http://www.alexa.com/topsites/countries/US)
