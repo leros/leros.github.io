@@ -2,6 +2,8 @@
 layout: post
 title:  Udacity DLND课程项目常见问题汇总
 date:   2017-11-30 21:43:55 -0500
+redirect_from:
+  - /udacity-dlnd-faqs/
 ---
 自2017年五月起，我开始利用业余时间审阅[Udacity深度学习基石纳米学位(DLND)](https://cn.udacity.com/course/deep-learning-nanodegree-foundation--nd101-cn)的课程项目。在这一过程中，我发现有一些错误经常出现，同时有些问题也常在备注中看到，这个系列旨在对这些问题做个总结，方便学员参考。
 
