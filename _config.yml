@@ -28,6 +28,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+google_analytics: UA-71753357-1
 
 defaults:
   - scope:
