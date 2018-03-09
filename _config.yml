@@ -37,8 +37,9 @@ defaults:
     values:
       image: true
 
-disqus:
-    shortname: leo-lei
+# uncomment to enable (ugly) disqus
+#disqus:
+#    shortname: leo-lei
 
 show_excerpts: true
 # Exclude from processing.
