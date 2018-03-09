@@ -3,7 +3,7 @@ layout: post
 title:  "DLND项目二：构建CNN模型为图片分类"
 date:   2017-10-23 21:43:55 -0500
 ---
-本文是“Udacity深度学习课程项目常见问题系列”的第二篇，主要针对第二个项目：构建一个卷积神经网络（CNN）对图片进行分类。通过这个项目，学员可以学习CNN的基本知识，以及tensorflow的常见模块和概念，比如placoholder、tensor、graph等等
+本文是“[Udacity深度学习课程项目常见问题系列](http://leolei.com/udacity-dlnd-faqs/)”的第二篇，主要针对第二个项目：构建一个卷积神经网络（CNN）对图片进行分类。通过这个项目，学员可以学习CNN的基本知识，以及tensorflow的常见模块和概念，比如placoholder、tensor、graph等等。
 
 ---
 

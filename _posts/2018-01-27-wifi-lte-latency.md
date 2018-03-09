@@ -3,9 +3,9 @@ layout: post
 title:  Understanding Latency Performance of Wi-Fi and LTE
 date:   2018-01-27 21:43:55 -0500
 ---
-_A project report I finished in late 2015 for **Tufts COMP112 Networks & Protocols**.  Using data collected from a single mobile device, I compared the latency performance of two prevalent wireless technologies: Wi-Fi and LTE. I also investigated the causes of the performance difference._
+A project report I finished in late 2015 for Tufts COMP112 Networks & Protocols.  Using data collected from a single mobile device, I compared the latency performance of two prevalent wireless technologies: Wi-Fi and LTE. I also investigated the causes of the performance difference.
 
-_Posted with minor changes in wording._
+*Posted with minor changes in wording.*
 
 ---
 - [Introduction](#introduction)

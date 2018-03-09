@@ -3,7 +3,7 @@ layout: post
 title:  "DLND项目三：利用RNN模型生成电视剧本"
 date:   2017-10-25 21:43:55 -0500
 ---
-本文是“Udacity深度学习课程项目常见问题系列”的第三篇，主要针对项目三：构建一个卷积神经网络（Recurrent Neural Network， RNN）来生成电视剧本。这个项目跟课堂讲过的[Anna KaRNNa](https://github.com/udacity/deep-learning/blob/master/intro-to-rnns/Anna_KaRNNa.ipynb)例子很接近，区别在于Anna KaRNNa是以字符为单位来推演，而这个项目是以词为单位来推演。 以下为该项目易犯的错误及常见的问题。
+本文是“[Udacity深度学习课程项目常见问题系列](http://leolei.com/udacity-dlnd-faqs/)”的第三篇，主要针对项目三：构建一个卷积神经网络（Recurrent Neural Network， RNN）来生成电视剧本。这个项目跟课堂讲过的[Anna KaRNNa](https://github.com/udacity/deep-learning/blob/master/intro-to-rnns/Anna_KaRNNa.ipynb)例子很接近，区别在于Anna KaRNNa是以字符为单位来推演，而这个项目是以词为单位来推演。 以下为该项目易犯的错误及常见的问题。
 
 ---
 

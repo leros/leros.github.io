@@ -4,7 +4,7 @@ title:  Unicode - born for the Web
 date:   2018-01-28 21:43:55 -0500
 ---
 
-*Project report for **Tufts COMP150 Internet-scale Distributed Systems(Spring 2016)**. I tried to explain the prevalence of UTF-8 on the Web, from the perspective of history and technology.*
+Project report for Tufts COMP150 Internet-scale Distributed Systems(Spring 2016). I tried to explain the prevalence of UTF-8 on the Web, from the perspective of history and technology.
 
 *Posted with minor changes in wording and format.*
 

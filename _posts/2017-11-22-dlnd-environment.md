@@ -4,7 +4,9 @@ title:  利用Conda配置DLND课程项目运行环境
 date:   2017-11-2 21:43:55 -0500
 ---
 
-对DLND项目而言，最重要的两个package是Python和Tensorflow，由于Tensorflow发展很快，从年初的1.0现在已经升级到了1.4，而利用conda安装的Tensorflow也往往保持了这个节奏。但不少课程项目都是基于1.0或者1.1的，就出现了一些因为Tensorflow版本引起的问题。下面介绍一种简单的方式，可以根据自己的需要创建所需的环境，这里以创建一个Python3.6 + Tensorflow1.0.0的环境为例。假设使用的是AWS g2.2xlarge GPU instance，以及Udacity 的udacity-dl镜像(ami-3a603b5a)
+对DLND项目而言，最重要的两个package是Python和Tensorflow，由于Tensorflow发展很快，从年初的1.0现在已经升级到了1.4，而利用conda安装的Tensorflow也往往保持了这个节奏。但不少课程项目都是基于1.0或者1.1的，就出现了一些因为Tensorflow版本引起的问题。下面介绍一种简单的方式，可以根据自己的需要创建所需的环境。
+
+这里以创建一个Python3.6 + Tensorflow1.0.0的环境为例，假设使用的是AWS g2.2xlarge GPU instance，以及Udacity 的udacity-dl镜像(ami-3a603b5a)
 
 -   第一步：利用conda新建一个名为tf1.0-py3.6的新环境，指定Python版本，这里选择了3.6
 
