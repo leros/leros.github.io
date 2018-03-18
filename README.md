@@ -1,3 +1,3 @@
-A site to share my thoughts on technology and society. 
+Personal website built with [jekyll](https://jekyllrb.com/) and hosted by ~~[Github](https://github.com)~~ [Netlify](https://www.netlify.com/).
 
-[http://leolei.com](http://leolei.com)
+[https://leolei.com](http://leolei.com)
