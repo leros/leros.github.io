@@ -29,6 +29,7 @@ plugins:
   - jekyll-feed
   - jekyll-redirect-from
   - jekyll-sitemap
+  
 google_analytics: UA-71753357-1
 
 defaults:
